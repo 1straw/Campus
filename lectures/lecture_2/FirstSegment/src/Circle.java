@@ -4,15 +4,19 @@ public class Circle {
     double diameter;
     double radius;
     double circumference;
+    double area;
 
     Circle(double diameter) {  // Kontruktor för cirkel
         this.diameter = diameter;
     }
     void calculateRadius() {
-        this.radius = this.diameter / 2; // Uträkning för radie
+        this.radius = (this.diameter / 2); // Uträkning för radie
     }
     void calculateCircumference() {
-        this.circumference = 2 * Math.PI * this.radius; // Uträkning för omkrets
+        this.circumference = (2 * Math.PI * this.radius); // Uträkning för omkrets
+    }
+    void calculateArea(){
+        this.area = (Math.PI * Math.pow(radius, 2)); //Räkna ut arean av cirkeln
     }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in); // Skapar scanner för att ta in värden ifrån användaren
@@ -23,8 +27,8 @@ public class Circle {
 
         circle1.calculateRadius();
         circle1.calculateCircumference();
-        System.out.println("Omkretsen av cirkeln är: " + circle1.circumference);
-
-
+        circle1.calculateArea();
+        System.out.println("Omkretsen av cirkeln = " + circle1.circumference);
+        System.out.println("Arean av cirkeln = " + circle1.area);
     }
 }
