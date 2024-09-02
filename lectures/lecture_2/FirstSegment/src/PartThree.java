@@ -93,7 +93,6 @@ public class PartThree {
         //Uppgift 4.1
         //Räkna ut om talet är ett primtal eller inte
         System.out.println("Uppgift 4.1");
-        System.out.println(6 % 6);
 
         for (int i = 2; i <= 100; i++) {
             boolean isPrime = true;
